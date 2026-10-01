@@ -1,13 +1,13 @@
-Yuan Shilin — Training Case File
+袁世林——训练案例档案
 
-«Case type: Young high-level Chinese physique athlete / longitudinal training case
-Primary use: Natural training case database
-Data status: Public-source reconstruction
-Last reviewed: 2026»
+«案例类型：中国年轻高水平体格运动员 / 纵向训练案例
+主要用途：自然训练案例数据库
+数据状态：公开来源重建
+最后审核：2026年»
 
 ---
 
-1. Case Position
+1.案例位置
 
 袁世林是本数据库中的中国年轻高水平长期训练案例。
 
