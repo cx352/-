@@ -678,62 +678,326 @@ Arms| Specific programming| Pending
 
 当前公开内容至少可以确认：
 
-举重| 证据
+Lift| Evidence
 Squat| 180 kg challenge documented
-硬拉| 180公斤挑战记录
-其他举重项目| 待处理
+Deadlift| 180 kg challenge documented
+Other lifts| Pending
 
 注意：
 
-“挑战180公斤”并不等于：
+“挑战 180 kg”不等于：
 
 - 180 kg 工作组
--180公斤多次重复
-- 180公斤 训练容量
+- 180 kg 多次重复
+- 180 kg 训练容量
 
 因此只记录为：
 
-力量基准证据
+Strength Benchmark Evidence
 
 而不是：
 
-训练处方
+Training Prescription
 
 ---
 
-25. 数据状态系统
+25. Data Status System
 
 所有数据统一使用：
 
-已记录
+DOCUMENTED
 
 原始公开内容明确展示或说明。
 
-推导得出
+DERIVED
 
-根据多项记录数据进行合理计算。
+根据多个 DOCUMENTED 数据进行合理计算。
 
-运动员报告
+ATHLETE-REPORTED
 
 运动员本人明确陈述，但缺少独立验证。
 
-次要
+SECONDARY
 
 第三方资料。
 
-未知
+UNKNOWN
 
 没有足够证据。
 
-估算
+ESTIMATE
 
 模型或研究人员推算。
 
 ---
 
-26. 当前证据表
+26. Current Evidence Table
 
-变量| 状态
-长期训练| 有据可查
-2023年起点| 运动员报告/记录
-教练在
+Variable| Status
+Long-term training| DOCUMENTED
+2023 starting point| ATHLETE-REPORTED / DOCUMENTED
+Coach intervention| DOCUMENTED
+One-a-day phase| DOCUMENTED
+Two-a-day phase| DOCUMENTED
+Two-a-day + cardio| DOCUMENTED
+Chest training| DOCUMENTED
+Shoulder training| DOCUMENTED
+Back training| DOCUMENTED
+Leg training| DOCUMENTED
+Split leg training| DOCUMENTED
+Squat| DOCUMENTED
+Deadlift| DOCUMENTED
+180 kg squat benchmark| DOCUMENTED
+180 kg deadlift benchmark| DOCUMENTED
+Recovery/sleep changes| DOCUMENTED
+Complete weekly split| UNKNOWN
+Weekly volume| UNKNOWN
+Sets/exercise| UNKNOWN
+Reps/exercise| UNKNOWN
+RIR| UNKNOWN
+RPE| UNKNOWN
+Failure frequency| UNKNOWN
+Complete exercise order| UNKNOWN
+Natural lifetime status| PENDING
+
+---
+
+27. High-value Training Lessons
+
+Lesson 1 — Frequency Is Context-dependent
+
+袁世林同时存在：
+
+- 一练
+- 二练
+
+因此他的案例不能支持单一固定训练频率。
+
+Skill 应优先根据：
+
+Volume + Recovery + Schedule + Performance
+
+决定频率。
+
+---
+
+Lesson 2 — More Sessions Require More Recovery
+
+二练阶段同时伴随：
+
+- 更高训练时间
+- 更高恢复需求
+- 营养需求
+- 睡眠需求
+
+因此：
+
+«增加训练频率之前，必须确认恢复能力和能量供应。»
+
+---
+
+Lesson 3 — Training Must Change With Phase
+
+增肌期与备赛期不能使用完全相同的训练策略。
+
+尤其需要观察：
+
+Training volume
+
+Training frequency
+
+Cardio
+
+Recovery
+
+之间的关系。
+
+---
+
+Lesson 4 — Recovery Is Part of the Program
+
+袁世林公开内容中存在主动增加睡眠、休息以及训练后恢复的记录。
+
+因此：
+
+«Recovery 不是训练之外的变量，而是训练计划的一部分。»
+
+---
+
+28. Cross-case Validation
+
+袁世林的训练数据不能单独改变 Skill。
+
+需要与：
+
+- 谭成义
+- 王正浩
+- 凯神王 / 凯圣王（身份进一步确认）
+- 小logan
+- 蒋介钢
+- 郑伟
+- Naoya Amano
+- Yongseung Lee
+- Eric Helms
+
+进行交叉比较。
+
+---
+
+29. Skill Integration Rule
+
+当用户询问：
+
+«“我应该一练还是二练？”»
+
+Skill 不应回答：
+
+«“袁世林二练，所以你也二练。”»
+
+正确流程：
+
+User State
+    ↓
+Training Recovery
+    ↓
+Weekly Volume
+    ↓
+Schedule
+    ↓
+Scientific Evidence
+    ↓
+Natural Athlete Cases
+    ↓
+Individual Response
+    ↓
+Recommended Frequency
+
+袁世林案例只作为：
+
+Case Evidence
+
+而不是：
+
+Universal Rule
+
+---
+
+30. Research Priority
+
+后续如果继续补充袁世林原始视频，优先级：
+
+P1 — Weekly Split
+
+恢复完整周训练安排。
+
+P2 — Exercise Selection
+
+记录具体动作。
+
+P3 — Sets
+
+记录每个动作的工作组。
+
+P4 — Reps
+
+记录重复次数。
+
+P5 — RIR / Failure
+
+只有视频或本人明确说明时记录。
+
+P6 — Frequency
+
+建立不同阶段频率变化。
+
+P7 — Gaining vs Contest Prep
+
+比较训练策略。
+
+P8 — Recovery
+
+训练量 × 睡眠 × 疲劳。
+
+P9 — Performance
+
+力量变化 × 体重变化。
+
+---
+
+31.最终案例评估
+
+案例价值
+
+高
+
+纵向数据
+
+高
+
+训练数据
+
+高潜力
+
+自然证据
+
+待定
+
+训练频率证据
+
+High
+
+恢复证据
+
+高
+
+精确编程数据
+
+中 / 待定
+
+Exact Volume Data
+
+低 / 待定
+
+---
+
+32.核心数据库结论
+
+袁世林最值得进入 Skill 的，不是某一个固定训练计划，而是他的：
+
+«长期训练轨迹 + 一练/二练变化 + 增肌/备赛转换 + 教练介入 + 恢复变化 + 训练表现变化。»
+
+因此将其定义为：
+
+高价值纵向训练案例
+
+而不是：
+
+通用训练模板
+
+最终技能应当从多个自然训练案例中寻找：
+
+常见模式
+
+而不是寻找：
+
+某位运动员的完美训练计划
+
+---
+
+33.资料来源说明
+
+主要证据来自袁世林本人公开抖音内容及其账号公开作品索引。
+
+重点证据包括：
+
+- 一练 / 二练训练安排
+- 增肌期一天两练一有氧
+- 与刘孟易训练胸部
+- 与刘孟易训练肩部
+- 腿部分开训练
+-深蹲/硬拉180公斤挑战
+- 备赛后期训练与恢复
+- 睡眠恢复记录
+- 2023 → 后续训练发展的长期记录
+
+所有未能从原始公开资料确认的数据均保留为 UNKNOWN，不使用健美常规进行补值。
