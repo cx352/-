@@ -1,24 +1,95 @@
-# Phase Selector Engine
+# Phase Selector Engine V2.0
 
-## 1. Purpose
+Version:
+
+2.0
+
+
+# 1. Purpose
+
 
 This module determines what the athlete should do NEXT based on current data.
 
+
 The system must not assume that every athlete should immediately bulk.
+
 
 The decision sequence is:
 
-> Assess current state → identify limiting factor → select phase → select strategy → monitor → reassess.
 
-The goal is to maximize long-term muscle gain while controlling unnecessary fat gain.
+Assess current state
+
+↓
+
+Identify limiting factor
+
+↓
+
+Select phase
+
+↓
+
+Select strategy
+
+↓
+
+Monitor
+
+↓
+
+Reassess
+
+
+The goal:
+
+Maximize long-term muscle gain while controlling unnecessary fat gain.
+
+
+Core principle:
+
+
+The athlete's current physiological state determines the phase.
+
+Not the athlete's desired label.
+
 
 ---
 
-# 2. Required Inputs
+# 2. Connection With State Assessment Engine
 
-The system should request the following information when available:
+
+This module receives information from:
+
+
+decision_engine/state_assessment.md
+
+
+Required inputs:
+
+
+- Current physical state
+- Body composition trend
+- Nutritional state
+- Training state
+- Recovery state
+- Activity state
+- Main limiting factor
+- Confidence level
+
+
+Phase selection should not operate independently from state assessment.
+
+
+---
+
+# 3. Required Inputs
+
+
+The system should request the following information when available.
+
 
 ## Body
+
 
 - Age
 - Sex
@@ -33,27 +104,39 @@ The system should request the following information when available:
 - Recent competition date
 - Competition bodyweight
 
+
+---
+
 ## Nutrition
+
 
 - Current calories
 - Protein
 - Carbohydrates
 - Fat
-- Current food intake
+- Food intake consistency
 - Recent calorie changes
 - Dietary adherence
 
+
+---
+
 ## Training
+
 
 - Training frequency
 - Training split
 - Weekly sets
 - RIR/RPE
 - Main exercise performance
-- Recent strength trend
+- Strength trend
 - Training quality
 
+
+---
+
 ## Recovery
+
 
 - Sleep duration
 - Sleep quality
@@ -63,164 +146,323 @@ The system should request the following information when available:
 - Stress
 - Motivation
 
+
+---
+
 ## Activity
+
 
 - Average steps
 - Cardio
 - Recent activity changes
 
+
 ---
 
-# 3. First Decision: Is the Athlete in Post-Contest Recovery?
+# 4. Phase Selection Priority
 
-If the athlete recently completed a bodybuilding contest, first determine whether they are still in post-contest recovery.
 
-Relevant indicators:
+When multiple phases appear possible:
 
-- recent competition
-- very low competition bodyweight
-- recent severe calorie restriction
-- rapid increase in food intake
-- rapid increase in bodyweight
-- large carbohydrate increase
-- glycogen restoration
-- increased water retention
-- unusually high hunger
-- rapid performance improvement
 
-If several indicators are present:
+Use the following priority:
 
-> classify as POST-CONTEST RECOVERY.
+
+1. Post-contest recovery
+
+
+↓
+
+2. Recovery limitation
+
+
+↓
+
+3. Fat-loss requirement
+
+
+↓
+
+4. Recomposition opportunity
+
+
+↓
+
+5. Muscle gain
+
+
+The system should solve urgent physiological problems before optimizing long-term goals.
+
+
+---
+
+# 5. First Decision: Post-Contest Recovery
+
+
+Determine whether the athlete is still recovering from competition.
+
+
+Indicators:
+
+
+- Recent bodybuilding competition
+- Very low competition bodyweight
+- Severe calorie restriction
+- Rapid increase in food intake
+- Rapid bodyweight rebound
+- Large carbohydrate increase
+- Glycogen restoration
+- Increased water retention
+- High hunger
+- Rapid improvement in performance
+
+
+If several indicators exist:
+
+
+Classify as:
+
+
+POST-CONTEST RECOVERY
+
+
+Important:
+
 
 Do not automatically interpret rapid weight gain as fat gain.
 
+
+Consider:
+
+
+- Glycogen restoration
+- Water restoration
+- Sodium changes
+- Gastrointestinal content
+
+
+Primary objective:
+
+
+Establish stable physiological baseline.
+
+
 ---
 
-# 4. Second Decision: Is Fat Loss Currently the Priority?
+# 6. Recovery Limitation Phase
+
+
+Before selecting gaining or cutting phases:
+
+
+Check whether recovery is the primary limitation.
+
+
+Indicators:
+
+
+- Persistent fatigue
+- Performance decline
+- Poor sleep
+- High soreness
+- Joint discomfort
+- Low motivation
+
+
+Possible strategy:
+
+
+- Reduce training stress
+- Improve recovery
+- Adjust nutrition if required
+
+
+Do not immediately increase calories or training volume.
+
+
+---
+
+# 7. Fat-Loss Phase
+
 
 Consider FAT-LOSS when:
 
-- body fat is relatively high for the athlete's goals
-- waist is increasing significantly
-- the athlete wants to reduce body fat
-- bodyweight is intentionally decreasing
-- current body composition makes further gaining undesirable
+
+- Body fat is relatively high for the athlete's goal
+- Waist is increasing significantly
+- Fat reduction is the priority
+- Bodyweight is intentionally decreasing
+- Current body composition makes gaining inappropriate
+
 
 Primary strategy:
 
-> controlled calorie deficit while preserving training performance and lean mass.
+
+Controlled calorie deficit while preserving:
+
+
+- Lean mass
+- Strength
+- Training quality
+
+
+Monitor:
+
+
+- Weight loss rate
+- Waist reduction
+- Strength retention
+- Recovery
+- Hunger
+
 
 ---
 
-# 5. Third Decision: Is Recomposition Appropriate?
+# 8. Recomposition Phase
+
 
 Consider RECOMPOSITION when:
 
-- bodyweight is stable or slowly decreasing
-- waist is stable or decreasing
-- training performance is stable or improving
-- body fat is not extremely low
-- the athlete recently completed a diet
-- the athlete is returning from a contest
-- muscle gain and fat loss can reasonably occur simultaneously
+
+- Bodyweight is stable or slowly decreasing
+- Waist is stable or decreasing
+- Training performance is improving
+- Body fat is not extremely low
+- Athlete recently completed dieting
+- Muscle gain and fat loss may occur simultaneously
+
 
 Possible nutrition strategies:
 
-- maintenance calories
-- small calorie deficit
-- very small surplus
 
-Do not force weight gain when the athlete is already improving in:
+- Maintenance calories
+- Small deficit
+- Very small surplus
 
-- strength
-- muscular appearance
-- waist measurement
-- recovery
+
+Do not force weight gain when improvement is already occurring in:
+
+
+- Strength
+- Muscular appearance
+- Waist measurement
+- Recovery
+
 
 ---
 
-# 6. Fourth Decision: Is the Athlete Ready for Muscle Gain?
+# 9. Muscle-Gain Phase Selection
+
 
 Consider MUSCLE-GAIN when:
 
-- body fat is acceptable
-- recovery is good
-- training performance is progressing
-- waist is reasonably controlled
-- the athlete has no immediate need for further fat loss
 
-Then determine the appropriate rate of gain.
+- Body fat is acceptable
+- Recovery is good
+- Training performance is progressing
+- Waist is controlled
+- No immediate fat-loss requirement exists
+
+
+Then select gaining speed.
+
 
 ---
 
-# 7. Muscle-Gain Strategy Selection
+# 10. Muscle-Gain Strategy Selection
 
-Use three primary gaining strategies.
 
 ## A. Conservative Gain
 
+
 Use when:
 
-- athlete wants to minimize fat gain
-- body fat is moderate
-- athlete is relatively experienced
-- training performance is already good
+
+- Athlete wants minimal fat gain
+- Body fat moderate
+- Athlete experienced
+- Performance already good
+
 
 Initial strategy:
 
-> maintenance to approximately +100–200 kcal/day.
 
-Target rate:
+Maintenance to approximately:
 
-> approximately 0.10–0.25% bodyweight/week.
++100–200 kcal/day
 
-This is a starting range rather than a rigid rule.
+
+Target:
+
+
+0.10–0.25% bodyweight/week
+
+
+This is a starting framework.
+
+Not a universal rule.
+
 
 ---
 
 ## B. Standard Gain
 
+
 Use when:
 
-- athlete is relatively lean
-- recovery is good
-- training performance needs additional support
-- some fat gain is acceptable
 
-Initial strategy:
+- Athlete relatively lean
+- Recovery good
+- Performance requires more energy
+- Some fat gain acceptable
 
-> modest calorie surplus.
 
-Avoid unnecessarily large surpluses.
+Strategy:
+
+
+Moderate calorie surplus.
+
+
+Avoid unnecessary large surpluses.
+
 
 ---
 
 ## C. Higher-Calorie Gain
 
+
 Use only when justified.
+
 
 Possible reasons:
 
-- persistent weight loss
-- high activity
-- inadequate recovery
-- persistent performance decline
-- insufficient food intake
-- genuinely low energy availability
 
-Before increasing calories substantially, verify:
+- Persistent weight loss
+- High activity
+- Poor recovery due to low energy availability
+- Insufficient food intake
 
-- tracking accuracy
-- adherence
-- activity
-- training load
-- sleep
+
+Before increasing calories substantially:
+
+
+Verify:
+
+
+- Tracking accuracy
+- Adherence
+- Activity
+- Training load
+- Sleep
+
 
 ---
 
-# 8. Weight Trend Decision Tree
+# 11. Weight Trend Decision Tree
+
 
 ## Scenario 1
+
 
 Weight ↓
 
@@ -228,17 +470,23 @@ Waist ↓
 
 Performance ↑ or stable
 
+
 Interpretation:
 
-> Fat loss or recomposition may be occurring successfully.
+
+Fat loss or recomposition may be occurring.
+
 
 Action:
 
-> Do not automatically increase calories.
+
+Do not automatically increase calories.
+
 
 ---
 
 ## Scenario 2
+
 
 Weight →
 
@@ -246,35 +494,47 @@ Waist ↓
 
 Performance ↑
 
+
 Interpretation:
 
-> Strong recomposition signal.
+
+Strong recomposition signal.
+
 
 Action:
 
-> Maintain current strategy.
+
+Maintain strategy.
+
 
 ---
 
 ## Scenario 3
 
+
 Weight ↑ slowly
 
-Waist stable/minimally ↑
+Waist stable/minimal increase
 
 Performance ↑
 
+
 Interpretation:
 
-> Compatible with productive muscle gain.
+
+Compatible with productive muscle gain.
+
 
 Action:
 
-> Maintain current intake.
+
+Maintain current intake.
+
 
 ---
 
 ## Scenario 4
+
 
 Weight ↑ rapidly
 
@@ -282,17 +542,23 @@ Waist ↑ rapidly
 
 Performance does not improve proportionally
 
+
 Interpretation:
 
-> Possible excessive calorie surplus.
+
+Possible excessive surplus.
+
 
 Action:
 
-> Reduce calories slightly, usually through carbohydrate or fat adjustment.
+
+Reduce calories slightly.
+
 
 ---
 
 ## Scenario 5
+
 
 Weight ↓
 
@@ -302,17 +568,23 @@ Performance ↓
 
 Recovery ↓
 
+
 Interpretation:
 
-> Possible excessive deficit or insufficient recovery.
+
+Possible excessive deficit.
+
 
 Action:
 
-> Increase energy availability and/or reduce training stress.
+
+Increase energy availability and/or reduce training stress.
+
 
 ---
 
 ## Scenario 6
+
 
 Weight →
 
@@ -322,112 +594,315 @@ Performance →
 
 Recovery good
 
+
 Interpretation:
 
-> Maintenance or plateau.
 
-Action:
+Maintenance or possible plateau.
+
 
 Investigate:
 
-1. Training progression
-2. Volume
-3. Exercise selection
-4. Sleep
-5. Nutrition
-6. Activity
+
+- Training progression
+- Volume
+- Exercise selection
+- Sleep
+- Nutrition
+- Activity
+
 
 Do not automatically add calories.
 
+
 ---
 
-# 9. Carbohydrate Adjustment Engine
+# 12. Carbohydrate Adjustment Engine
 
-Carbohydrates should be adjusted primarily according to:
 
-- bodyweight trend
-- training performance
-- recovery
-- activity
-- total calorie intake
+Carbohydrates should be adjusted according to:
 
-## Increase carbohydrates when:
 
-- bodyweight is falling unintentionally
-- training performance is declining
-- recovery is worsening
-- activity is high
-- hunger is high
-- the athlete is otherwise adherent
+- Bodyweight trend
+- Performance
+- Recovery
+- Activity
+- Total calorie intake
+
+
+Increase carbohydrates when:
+
+
+- Weight falling unintentionally
+- Performance declining
+- Recovery worsening
+- Activity high
+- Hunger high
+
 
 Typical adjustment:
 
-> +20–40 g carbohydrate/day.
 
-Then monitor for 7–14 days.
++20–40g carbohydrate/day
 
----
 
-## Maintain carbohydrates when:
+Monitor:
 
-- bodyweight trend is appropriate
-- performance is improving
-- waist is controlled
-- recovery is good
+7–14 days
+
 
 ---
 
-## Reduce carbohydrates when:
+Maintain carbohydrates when:
 
-- bodyweight rises substantially faster than planned
-- waist increases rapidly
-- performance does not justify the weight gain
+
+- Weight trend appropriate
+- Performance improving
+- Waist controlled
+- Recovery good
+
+
+---
+
+Reduce carbohydrates when:
+
+
+- Weight increasing faster than planned
+- Waist increasing rapidly
+- Performance does not justify gain
+
 
 Typical adjustment:
 
-> -20–40 g carbohydrate/day.
 
-Then monitor again.
+-20–40g carbohydrate/day
+
 
 ---
 
-# 10. Do Not Make Multiple Large Changes
+# 13. Adjustment Rules
 
-When the athlete is stable:
 
-Change only one major variable at a time.
+Do not make multiple large changes simultaneously.
+
+
+Change one major variable:
+
 
 Examples:
 
-- calories
-- carbohydrate
-- fat
-- training volume
-- cardio
-- steps
 
-Avoid changing everything simultaneously.
+- Calories
+- Carbohydrates
+- Fat
+- Training volume
+- Cardio
+- Steps
 
-This allows the system to identify what caused the response.
+
+Then monitor response.
+
 
 ---
 
-# 11. Adjustment Frequency
+# 14. Monitoring Period
 
-Do not react to single-day changes.
 
-Preferred monitoring:
+Preferred:
 
-### 7 days
 
-Useful for detecting short-term trends.
+7 days:
 
-### 14 days
+Short-term trend
 
-Preferred interval for most nutritional adjustments.
 
-### 28 days
+14 days:
 
-Useful for confirming long-term trends.
+Normal adjustment period
 
-Major changes should generally require multiple indicator
+
+28 days:
+
+Long-term confirmation
+
+
+Do not react to single-day fluctuations.
+
+
+---
+
+# 15. Athlete Database Reference
+
+
+The system may compare phase decisions with:
+
+
+athletes/
+
+
+Including:
+
+
+- Natural athlete cases
+- Competition preparation records
+- Long-term physique development
+
+
+However:
+
+
+Athlete examples are references only.
+
+
+They cannot override:
+
+
+- Scientific evidence
+- Individual response
+- Actual user data
+
+
+---
+
+# 16. Phase Confidence System
+
+
+Every decision must include confidence.
+
+
+## High Confidence
+
+
+Multiple consistent indicators.
+
+
+## Moderate Confidence
+
+
+Some indicators support the decision.
+
+More monitoring required.
+
+
+## Low Confidence
+
+
+Insufficient information.
+
+Avoid aggressive changes.
+
+
+---
+
+# 17. Phase Selector Output Format
+
+
+## Selected Phase
+
+
+Current phase:
+
+
+---
+
+## Evidence
+
+
+Bodyweight evidence:
+
+
+Body composition evidence:
+
+
+Nutrition evidence:
+
+
+Training evidence:
+
+
+Recovery evidence:
+
+
+---
+
+## Main Reason
+
+
+Why this phase was selected:
+
+
+---
+
+## Main Limiting Factor
+
+
+Current limitation:
+
+
+---
+
+## Confidence
+
+
+High / Moderate / Low
+
+
+---
+
+## Next Module
+
+
+Continue to:
+
+
+- bulking.md
+
+- cutting_engine.md
+
+- contest_prep.md
+
+- recovery.md
+
+
+---
+
+## Monitoring Plan
+
+
+Reassess after:
+
+
+7–14 days
+
+or
+
+28 days for long-term confirmation.
+
+
+---
+
+# Final Principle
+
+
+The system does not choose the phase based on the athlete's wish.
+
+
+It chooses the phase based on:
+
+
+Current state
+
++
+
+Evidence
+
++
+
+Individual response.
+
+
+Assess first.
+
+Select phase second.
+
+Adjust strategy third.
