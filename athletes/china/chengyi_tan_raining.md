@@ -1,59 +1,59 @@
-Chengyi Tan — Training System
+谭成义——训练体系
 
-1. Training System Overview
+1.训练体系概述
 
-Current public training framework
+当前公开的训练框架
 
-Chengyi Tan has publicly presented a Push / Pull / Legs training framework together with Kai Sheng Wang.
+谭成义与王凯胜共同公开提出了推/拉/腿训练框架。
 
-The system emphasizes:
+该体系强调：
 
-- movement quality
-- progressive overload
-- exercise selection according to biomechanics
-- fatigue management
-- sufficient recovery
-- high-quality working sets
-- keeping heavy compound movements away from failure
-- allowing smaller isolation movements to approach failure
+-动作质量
+-渐进超负荷
+-根据生物力学选择训练动作
+-疲劳管理
+-充分的恢复
+-高质量的工作组
+-避免大重量复合动作做到力竭
+-让小肌群孤立动作接近力竭
 
-Important:
+重要提示：
 
-This file describes Chengyi Tan's publicly presented training practice.
+本文档介绍了谭成义公开演示的训练实践。
 
-It does NOT mean every component is scientifically superior to all alternative training systems.
+这并不意味着每个组成部分在科学上都优于所有其他训练体系。
 
 ---
 
-2. Split Structure
+2.拆分结构
 
-Push
+推
 
-Primary muscles:
+主要肌群：
 
-- chest
-- anterior / lateral deltoids
-- triceps
+-胸部
+-前束/侧束三角肌
+-肱三头肌
 
-Reported exercises:
+已记录的练习：
 
-1. Barbell bench press
-2. Incline dumbbell press
-3. Dips
-4. Lying triceps extension
-5. Y-raise / lateral raise
+1.杠铃卧推
+2.上斜哑铃卧推
+3.双杠臂屈伸
+4.仰卧臂屈伸
+5.Y字飞鸟/侧平举
 
-Training logic
+训练逻辑
 
-The push session combines:
+推举训练包含：
 
-- one major pressing movement
-- one additional chest press
-- a bodyweight / compound pressing movement
+-一项主要的推举动作
+-一项额外的胸推
+-一项自重/复合推举动作
 - direct triceps work
 - direct lateral-delt work
 
-This creates a combination of:
+这会产生一种组合：
 
 - high mechanical loading
 - muscle-specific work
@@ -260,31 +260,31 @@ Again, this is a practical framework, not a rigid rule.
 
 The public training material emphasizes that PPL does NOT necessarily mean:
 
-«3 training days + 1 rest day»
+“3天训练+1天休息”
 
-The cycle can be adjusted according to recovery.
+训练周期可根据恢复情况灵活调整。
 
-Potential schedules:
+可能的训练安排：
 
-High recovery
+高恢复
 
-Push → Pull → Legs → Rest
+推→拉→腿→休息
 
-Moderate recovery
+中等恢复
 
-Push → Pull → Rest → Legs → Push → Rest ...
+推→拉→休息→腿→推→休息……
 
-Low recovery
+低恢复
 
-Push → Rest → Pull → Rest → Legs → Rest
+推 → 休息 → 拉 → 休息 → 腿部 → 休息
 
-The important variable is not the name of the split.
+关键变量并非训练分割的名称。
 
-The important variables are:
+重要的变量有：
 
 - weekly productive volume
 - training quality
-- performance trend
+-表现趋势
 - muscle recovery
 - joint recovery
 - sleep
@@ -294,15 +294,15 @@ The important variables are:
 
 10. Natural-Athlete Interpretation
 
-For natural bodybuilding, the most useful lesson is NOT:
+对于自然健美而言，最有用的一课并不是：
 
-«"Everyone should train exactly like Chengyi Tan."»
+«“每个人都应该像谭成义一样训练。”»
 
-Instead:
+而是：
 
-«Build a training system that provides sufficient stimulus while allowing the athlete to repeatedly perform high-quality sessions.»
+“构建一套既能提供充分刺激，又能让运动员反复进行高质量训练的训练体系。”
 
-This is particularly important for natural athletes because there is no reason to assume that elite-athlete training volume or frequency will automatically be recoverable by every trainee.
+这一点对于天赋型运动员尤为重要，因为没有任何理由认为，精英运动员的训练量或训练频率就一定能够被每一位训练者所完全恢复。
 
 ---
 
@@ -319,22 +319,22 @@ These principles are potentially useful for the Skill:
 - individual exercise selection
 - unilateral work when useful
 - recovery-based scheduling
-- high-quality working sets
+-高质量的工作组
 
 ---
 
 12. What Should NOT Be Copied Automatically
 
-Do not automatically copy:
+请勿自动复制：
 
-- exact exercise list
-- exact number of sets
-- exact repetitions
-- exact weekly frequency
-- exact rest schedule
-- exact RPE
-- exact progression speed
-- exact training volume
+-精确的练习清单
+-精确的组数
+-精确的重复次数
+-精确的每周训练频率
+-精确的休息安排
+-精确的RPE
+-精确的训练进度
+-精确的训练量
 
 理由：
 
@@ -352,14 +352,210 @@ Do not automatically copy:
 
 ---
 
-13.生物力学整合
+# 13. Competition Preparation
 
-该系统的一个特别有用之处在于，它强调根据个体的生物力学特征来选择训练动作。
+Chengyi Tan's competition preparation can be used as a case study for:
 
-因此，该技能不应规定：
+- Maintaining resistance training during fat loss
+- Managing training fatigue
+- Preserving muscle mass
+- Adjusting volume according to recovery
+- Integrating diet and training
+- Monitoring performance during a deficit
 
-«“每个人都必须做卧推。”»
+Important principle:
+
+> During a cutting phase, the objective is not to maximize training volume. The objective is to preserve or maximize useful training stimulus while managing fatigue.
+
+---
+
+# 14. Training Quality Control
+
+For every exercise, evaluate:
+
+### Technique
+
+- Stable setup
+- Consistent execution
+- Appropriate ROM
+- Controlled eccentric
+- Appropriate force direction
+
+### Stimulus
+
+- Target muscle receives sufficient tension
+- Load is appropriate
+- Repetitions remain productive
+
+### Fatigue
+
+- Does the exercise create excessive systemic fatigue?
+- Does it impair later exercises?
+- Does it impair recovery between sessions?
+
+The preferred exercise is not necessarily the exercise with the greatest absolute load.
+
+---
+
+# 15. Natural Athlete Case Interpretation
+
+Chengyi Tan should NOT be interpreted as:
+
+> "This is the correct natural bodybuilding program."
+
+Instead:
+
+> "This is one high-level natural bodybuilding case from which useful training principles can be extracted."
+
+The Skill must compare his training practices with:
+
+- Scientific evidence
+- Other natural athletes
+- The user's individual response
+
+---
+
+# 16. Cross-Case Validation
+
+When generating a training recommendation:
+
+### Step 1
+
+Check scientific evidence.
+
+### Step 2
+
+Check Chengyi Tan's documented training practices.
+
+### Step 3
+
+Compare with other natural athlete cases.
+
+### Step 4
+
+Compare with the user's training response.
+
+### Step 5
+
+Generate the individualized recommendation.
+
+Decision structure:
+
+Scientific Evidence
+        ↓
+Natural Athlete Cases
+        ↓
+Individual Response
+        ↓
+Training Decision
+
+---
+
+# 17. Data Reliability
+
+Every athlete-specific training variable must be classified.
+
+### Documented
+
+Directly visible or verified from the athlete's own material.
+
+### Athlete-Reported
+
+Explicitly stated by the athlete.
+
+### Secondary Source
+
+Reported by another credible source.
+
+### Derived
+
+Calculated or inferred from available evidence.
+
+### Unknown
+
+Insufficient evidence.
+
+Never convert:
+
+> UNKNOWN → Assumed Fact
+
+---
+
+# 18. Variables That Must Not Be Invented
+
+Unless directly verified, do NOT invent:
+
+- Exact weekly sets
+- Exact weekly frequency
+- Exact RIR
+- Exact rest intervals
+- Exact progression scheme
+- Exact deload schedule
+- Exact exercise rotation
+- Exact yearly training volume
+- Exact calorie intake
+- Exact macronutrient intake
+
+These variables should remain:
+
+>未知
+
+until sufficient evidence becomes available.
+
+---
+
+# 19. Practical Application
+
+When the user asks:
+
+> "我现在应该怎么练？"
+
+请勿照搬陈怡坦。
 
 而是：
 
-«"选择能使目标肌肉在可接受的关节应力下获得较高机械张力的动作
+用户状态
+↓
+训练目标
+↓
+科学证据
+↓
+谭成义案
+↓
+其他自然运动员案例
+↓
+个人反馈
+↓
+训练计划
+
+最终的训练建议应包括：
+
+-分化
+-频率
+-每周训练组数
+-运动项目选择
+-每项练习的组数
+-重复次数
+- RIR
+-休息间隔
+-练习顺序
+-进阶
+-减量策略
+-监测标准
+
+---
+
+#20. 核心要点
+
+从陈毅谭案中可以总结出的主要可迁移经验教训是：
+
+1.训练质量比盲目增加训练量更为重要。
+2.训练频率是实现高效训练的手段之一。
+3. 高频率训练需要充分的恢复。
+4. 运动项目的选择应因人而异。
+5. 进阶是多维度的。
+6. 每次训练后的疲劳程度应得到合理控制。
+7. 训练方案应根据运动员当前的状态进行调整。
+8.营养与训练应统筹评估。
+9.高水平运动员的实践仅属个案研究，并非普遍适用的证据。
+10. 最终的训练建议应由科学证据、运动员个案数据及个体反应共同决定。
