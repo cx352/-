@@ -1,32 +1,93 @@
-# State Assessment Engine
+# State Assessment Engine V2.0
 
-## 1. Purpose
+Version:
 
-This module is the primary state-assessment system for the natural bodybuilding coaching Skill.
+2.0
 
-Its job is to determine:
 
-1. The athlete's current physical state
-2. The current training/recovery state
-3. The current nutritional state
-4. The current bodybuilding phase
-5. The appropriate muscle-gain strategy
-6. Whether the current strategy should be maintained, increased, reduced, or changed
+Purpose:
+
+This module is the primary state-assessment system for the Asian Natural Bodybuilding Coach Skill.
+
+Its purpose is to determine:
+
+- The athlete's current physical state
+- Current bodybuilding phase
+- Training condition
+- Recovery condition
+- Nutritional condition
+- Current limiting factors
+- Appropriate direction for future strategy adjustment
+
+
+Core Principle:
+
+Assess first → choose strategy second → adjust third.
+
 
 The system must assess the athlete BEFORE prescribing major changes.
 
-Core principle:
-
-> Assess first → choose strategy second → adjust third.
+The system must not directly provide a training or nutrition prescription from the athlete's goal alone.
 
 ---
 
-# 2. Required Data
+# 1. Core Assessment Architecture
 
-The system should use longitudinal data whenever possible.
 
-## Body data
+All assessment follows:
 
+
+DATA
+
+↓
+
+STATE
+
+↓
+
+PHASE
+
+↓
+
+LIMITING FACTOR
+
+↓
+
+STRATEGY SELECTION
+
+↓
+
+MONITORING
+
+
+The system must first determine:
+
+"What is currently happening?"
+
+
+Only then determine:
+
+"What should be changed?"
+
+---
+
+# 2. Required Data Collection
+
+
+The system should prioritize longitudinal data.
+
+Single-day information should not be used for major decisions.
+
+---
+
+# Body Data
+
+
+Required:
+
+- Age
+- Sex
+- Height
 - Morning bodyweight
 - 7-day average bodyweight
 - 14-day average bodyweight
@@ -36,28 +97,54 @@ The system should use longitudinal data whenever possible.
 - Estimated body-fat percentage
 - Competition bodyweight if applicable
 
-## Nutrition
+
+Missing information must be marked:
+
+UNKNOWN
+
+---
+
+# Nutrition Data
+
+
+Collect:
 
 - Average daily calories
-- Protein
-- Carbohydrates
-- Fat
-- Food consistency
+- Protein intake
+- Carbohydrate intake
+- Fat intake
+- Food sources
+- Dietary consistency
 - Meal timing
-- Recent diet changes
+- Recent dietary changes
+- Diet adherence
 
-## Training
+
+---
+
+# Training Data
+
+
+Collect:
 
 - Weekly training frequency
+- Training split
 - Weekly productive sets
-- Main lift performance
+- Exercise selection
 - Repetitions
-- Load
+- Load progression
 - RIR/RPE
 - Training quality
 - Performance trend
+- Progressive overload status
 
-## Recovery
+
+---
+
+# Recovery Data
+
+
+Collect:
 
 - Sleep duration
 - Sleep quality
@@ -65,299 +152,758 @@ The system should use longitudinal data whenever possible.
 - Joint fatigue
 - General fatigue
 - Motivation
-- Stress
+- Stress level
 
-## Activity
+
+---
+
+# Activity Data
+
+
+Collect:
 
 - Average daily steps
 - Cardio
 - Changes in activity level
 
+
 ---
 
 # 3. Primary Assessment Domains
 
-Evaluate five domains:
 
-### A. Body composition
+Evaluate five major domains:
 
-- bodyweight trend
-- waist trend
-- visual changes
-- estimated body fat
 
-### B. Muscle-building response
+## A. Body Composition State
 
-- strength
-- repetitions
-- training performance
-- muscular measurements
-- visual muscularity
 
-### C. Recovery
+Analyze:
 
-- sleep
-- soreness
-- fatigue
-- motivation
-- joint condition
+- Bodyweight trend
+- Waist trend
+- Visual changes
+- Estimated body fat
+- Competition condition
 
-### D. Energy availability
 
-- calorie intake
-- carbohydrate intake
-- bodyweight trend
-- hunger
-- activity level
+Important:
 
-### E. Training stimulus
+Bodyweight change does not automatically equal fat change.
 
-- weekly volume
-- frequency
-- exercise selection
-- proximity to failure
-- progression
-
----
-
-# 4. Phase Classification
-
-The system should classify the athlete into one primary phase.
-
-Possible states:
-
-1. Post-contest recovery
-2. Fat-loss phase
-3. Recomposition phase
-4. Conservative muscle-gain phase
-5. Standard muscle-gain phase
-6. Aggressive muscle-gain phase
-7. Maintenance phase
-8. Training-fatigue accumulation
-9. Performance plateau
-10. Deload / recovery phase
-
-The classification should be based on the athlete's actual data rather than the athlete's desired label.
-
----
-
-# 5. Post-Contest Recovery
-
-Classify as post-contest recovery when several of the following are present:
-
-- recent bodybuilding competition
-- unusually low competition bodyweight
-- recent severe calorie restriction
-- recently increased food intake
-- rapid bodyweight rebound
-- large changes in glycogen/water
-- unusually high hunger
-- rapid improvement in training performance
-- psychological or behavioral difficulty returning to normal eating
-
-During this state:
-
-DO NOT interpret every increase in bodyweight as fat gain.
 
 Consider:
 
-- glycogen restoration
-- water restoration
-- gastrointestinal content
-- increased sodium/carbohydrate intake
+- Glycogen
+- Water
+- Sodium
+- Food volume
+- Fat mass
+- Lean mass
 
-The first priority is establishing a stable baseline.
+
+---
+
+## B. Muscle Building Response
+
+
+Analyze:
+
+- Strength trend
+- Repetition performance
+- Training progression
+- Muscle measurements
+- Visual muscularity
+
+
+Possible outcomes:
+
+### Positive Adaptation
+
+Indicators:
+
+- Strength increasing
+- Performance improving
+- Recovery acceptable
+
+
+### Neutral Adaptation
+
+Indicators:
+
+- Performance stable
+- Physique stable
+
+
+### Negative Adaptation
+
+Indicators:
+
+- Performance declining
+- Recovery worsening
+
+
+---
+
+## C. Recovery State
+
+
+Evaluate:
+
+- Sleep
+- Fatigue
+- Motivation
+- Joint condition
+- Soreness
+
+
+Recovery problems should not automatically be interpreted as calorie problems.
+
+
+Potential causes:
+
+- Excessive volume
+- Excessive intensity
+- Poor sleep
+- High life stress
+- Insufficient nutrition
+
+
+---
+
+## D. Energy Availability
+
+
+Evaluate:
+
+- Current calories
+- Carbohydrates
+- Bodyweight trend
+- Hunger
+- Activity level
+
+
+Possible states:
+
+
+### Energy Sufficient
+
+Indicators:
+
+- Performance stable/improving
+- Recovery acceptable
+
+
+---
+
+### Energy Limited
+
+Indicators:
+
+- Weight decreasing unintentionally
+- Performance declining
+- Hunger increasing
+- Recovery worsening
+
+
+---
+
+### Energy Excessive
+
+Indicators:
+
+- Weight increasing rapidly
+- Waist increasing rapidly
+- Performance not improving
+
+
+---
+
+## E. Training Stimulus
+
+
+Evaluate:
+
+- Weekly volume
+- Frequency
+- Exercise selection
+- Proximity to failure
+- Progression
+
+
+Do not increase training volume before confirming that current training is executed correctly.
+
+---
+
+# 4. Current Phase Classification
+
+
+The system must classify the athlete into one primary phase.
+
+
+Possible phases:
+
+
+- Post-contest recovery
+- Fat-loss phase
+- Recomposition phase
+- Conservative muscle-gain phase
+- Standard muscle-gain phase
+- Aggressive muscle-gain phase
+- Maintenance phase
+- Training-fatigue accumulation
+- Performance plateau
+- Deload/recovery phase
+
+
+The classification must be based on actual data.
+
+The athlete's desired goal alone cannot determine the phase.
+
+---
+
+# 5. Post-Contest Recovery State
+
+
+Classify as post-contest recovery when several conditions exist:
+
+
+- Recent bodybuilding competition
+- Very low competition bodyweight
+- Recent severe calorie restriction
+- Recently increased food intake
+- Rapid bodyweight rebound
+- Large glycogen/water restoration
+- High hunger
+- Rapid training performance improvement
+
+
+During this phase:
+
+
+Do NOT interpret every weight increase as fat gain.
+
+
+Consider:
+
+- Glycogen restoration
+- Water restoration
+- Sodium changes
+- Gastrointestinal content
+
+
+Primary goal:
+
+Establish a stable physiological baseline.
 
 ---
 
 # 6. Fat-Loss Phase
 
-Classify as fat-loss when:
 
-- body fat is relatively high for the athlete's goals
-- the primary objective is reducing fat
-- bodyweight is intentionally decreasing
-- calorie intake is below estimated maintenance
+Classify when:
+
+
+- Body fat reduction is the primary goal
+- Bodyweight is intentionally decreasing
+- Calories are below maintenance
+
 
 Monitor:
 
-- rate of weight loss
-- waist reduction
-- strength retention
-- recovery
-- hunger
+
+- Rate of weight loss
+- Waist reduction
+- Strength retention
+- Recovery
+- Hunger
+
 
 Primary objective:
 
-> Reduce fat while preserving as much lean mass and training performance as practical.
+
+Reduce fat while preserving lean mass and training performance.
 
 ---
 
 # 7. Recomposition Phase
 
-Classify as recomposition when:
 
-- bodyweight is relatively stable
-- waist is decreasing or stable
-- training performance is improving
-- muscular appearance is improving
-- the athlete is not intentionally pursuing rapid weight gain
+Classify when:
 
-Recomposition is particularly plausible when:
 
-- the athlete recently finished a diet
-- training quality is improving
-- body fat is not extremely low
-- protein intake is adequate
-- resistance training is progressive
+- Bodyweight relatively stable
+- Waist decreasing or stable
+- Training performance improving
+- Muscular appearance improving
 
-Do not require bodyweight loss for fat loss to occur.
+
+More likely when:
+
+- Recently finished dieting
+- Protein intake adequate
+- Training progressive
+- Body fat not extremely low
+
+
+Do not require scale weight loss for fat loss to occur.
 
 ---
 
 # 8. Conservative Muscle-Gain Phase
 
-Use this phase when:
 
-- body fat is moderate
-- athlete wants muscle gain
-- fat gain should be minimized
-- training performance is improving
-- recovery is good
+Use when:
+
+
+- Body fat moderate
+- Muscle gain is priority
+- Fat gain should be minimized
+- Recovery good
+- Training progressing
+
 
 Typical strategy:
 
-- maintenance to small calorie surplus
-- approximately +100–200 kcal/day initially
-- slow weight gain
-- progressive resistance training
 
-Target weight gain:
+Initial adjustment:
+
++100–200 kcal/day
+
+
+Monitor:
+
+7–14 days
+
+
+Evaluate:
+
+- Weight trend
+- Waist trend
+- Performance
+- Recovery
+
+
+Target:
 
 Approximately:
 
 0.10–0.25% bodyweight/week
 
-This is a starting framework, not a universal rule.
+
+This is a framework, not a universal rule.
 
 ---
 
 # 9. Standard Muscle-Gain Phase
 
+
 Use when:
 
-- body fat is reasonably controlled
-- recovery is good
-- training performance is progressing
-- athlete accepts some fat gain
-- long-term hypertrophy is the primary goal
+
+- Body fat controlled
+- Recovery good
+- Training progressing
+- Long-term hypertrophy is priority
+
 
 Strategy:
 
-- modest calorie surplus
-- progressive overload
-- sufficient protein
-- sufficient carbohydrate
-- adequate recovery
+- Moderate surplus
+- Progressive overload
+- Adequate protein
+- Adequate carbohydrate
+- Sufficient recovery
 
-Avoid unnecessarily large surpluses.
+
+Avoid unnecessary large surpluses.
 
 ---
 
 # 10. Aggressive Muscle-Gain Phase
 
-This should be uncommon for experienced natural bodybuilders.
+
+Should be uncommon for experienced natural bodybuilders.
+
 
 Consider only when:
 
-- athlete is relatively lean
-- bodyweight has stalled for a prolonged period
-- training performance is poor
-- recovery is good
-- activity level is high
-- calorie intake is genuinely insufficient
 
-Before increasing calories substantially, verify:
+- Athlete relatively lean
+- Weight stalled for prolonged period
+- Recovery good
+- Activity high
+- Energy intake insufficient
 
-- food tracking
-- step count
-- training volume
-- sleep
-- adherence
 
-Aggressive calorie increases should not be the default response to a plateau.
+Before increasing calories:
+
+Check:
+
+- Food tracking accuracy
+- Steps
+- Training volume
+- Sleep
+- Adherence
+
 
 ---
 
 # 11. Maintenance Phase
 
-Classify as maintenance when:
 
-- bodyweight is stable
-- waist is stable
-- performance is stable
-- current physique is acceptable
-- no immediate fat-loss or muscle-gain objective requires a change
+Classify when:
 
-Maintenance can be a deliberate strategy.
 
-It may also be useful:
+- Bodyweight stable
+- Waist stable
+- Performance stable
+- Current physique acceptable
 
-- after a cutting phase
-- during fatigue
-- during life-stress periods
-- before starting another gaining phase
+
+Maintenance can be intentional.
+
+
+Useful during:
+
+- Post-diet transition
+- Fatigue periods
+- High stress periods
+- Before another gaining phase
 
 ---
 
-# 12. Training-Fatigue Accumulation
+# 12. Training Fatigue Accumulation
 
-Classify as fatigue accumulation when multiple indicators occur:
 
-- repeated performance decline
-- unusually high RPE
-- persistent soreness
-- poor sleep
-- low motivation
-- joint discomfort
-- declining training quality
+Classify when multiple indicators occur:
 
-Important:
 
-Do not automatically interpret this as insufficient calories.
+- Performance decline
+- Increased RPE
+- Persistent soreness
+- Poor sleep
+- Low motivation
+- Joint discomfort
+- Reduced training quality
+
+
+Do not automatically assume insufficient calories.
+
 
 Potential causes:
 
-- excessive volume
-- excessive frequency
-- excessive proximity to failure
-- insufficient sleep
-- increased life stress
-- 恢复不足
+- Excessive volume
+- Excessive frequency
+- Excessive failure training
+- Poor recovery
 
-可能的干预措施：
 
-- 减少训练量
-- 增加恢复
--暂时降低与失败的接近程度
--若证据表明能量摄入不足，则维持或略微增加热量摄入
+Possible strategies:
+
+- Reduce training volume
+- Increase RIR
+- Increase recovery time
+- Deload when appropriate
 
 ---
 
-# 13. 进步停滞
+# 13. Performance Plateau Assessment
 
-只有在经过充分观察后，才能宣布进入平台期。
 
-不要将一次糟糕的训练简单归结为平台期。
+A plateau requires sufficient observation.
 
-潜在的停滞：
 
-- 连续数周表现无变化
-- 体重稳定
-- 腰围稳定
-- 每次重复次数或负重无明显提升
-- 充足睡眠
--充足的营养
--充分的训练刺激
+Do not classify based on:
 
-在此进行研究
+- One bad workout
+- One bad week
+
+
+Possible plateau indicators:
+
+
+- Several weeks without performance improvement
+- Stable bodyweight
+- Stable waist
+- No improvement in repetitions or load
+
+
+Before intervention verify:
+
+
+- Sleep
+- Nutrition
+- Training execution
+- Progressive overload
+- Training stimulus
+
+
+Do not automatically add volume.
+
+---
+
+# 14. Limiting Factor Priority
+
+
+When multiple issues exist:
+
+Analyze in this order:
+
+
+1. Data Accuracy
+
+↓
+
+2. Training Execution
+
+↓
+
+3. Recovery
+
+↓
+
+4. Nutrition
+
+↓
+
+5. Program Design
+
+
+Basic problems must be solved before advanced adjustments.
+
+---
+
+# 15. Athlete Database Connection
+
+
+After completing assessment:
+
+The system may reference:
+
+
+athlete_database/
+
+
+Purpose:
+
+Compare practical patterns from:
+
+- Natural athletes
+- Longitudinal cases
+- Competition preparation records
+
+
+Important:
+
+
+Athlete cases are references only.
+
+
+They cannot override:
+
+- Scientific evidence
+- Individual response
+- Actual user data
+
+
+---
+
+# 16. Decision Engine Connection
+
+
+After assessment completion:
+
+
+Send output to:
+
+
+decision_engine/phase_selector.md
+
+
+and
+
+
+decision_engine/training_state.md
+
+
+Required information:
+
+
+- Current phase
+- Current state
+- Main limiting factor
+- Evidence supporting classification
+- Confidence level
+
+---
+
+# 17. Confidence System
+
+
+Every assessment must include:
+
+
+## High Confidence
+
+Strong evidence from:
+
+- Longitudinal data
+- Multiple indicators
+
+
+---
+
+## Moderate Confidence
+
+Some evidence exists.
+
+Additional monitoring required.
+
+
+---
+
+## Low Confidence
+
+Limited data.
+
+Avoid major changes.
+
+---
+
+# 18. State Assessment Output Format
+
+
+## Current Classification
+
+
+Phase:
+
+Current State:
+
+
+---
+
+## Body State
+
+
+Weight trend:
+
+Waist trend:
+
+Body composition:
+
+
+---
+
+## Nutrition State
+
+
+Calories:
+
+Protein:
+
+Carbohydrates:
+
+Fat:
+
+
+---
+
+## Training State
+
+
+Performance:
+
+Volume:
+
+Fatigue:
+
+
+---
+
+## Recovery State
+
+
+Sleep:
+
+Stress:
+
+Recovery:
+
+
+---
+
+## Main Limiting Factor
+
+
+Current suspected limitation:
+
+
+Evidence:
+
+
+---
+
+## Confidence
+
+
+High / Moderate / Low
+
+
+---
+
+## Next Module
+
+
+Recommend running:
+
+
+- phase_selector
+- training_state
+- nutrition_strategy
+- recovery_strategy
+
+
+---
+
+# 19. Final Rules
+
+
+The system must:
+
+
+- Never make major decisions from one-day data
+- Never equate bodyweight change with fat change automatically
+- Never invent missing information
+- Mark missing information as UNKNOWN
+- Never copy one athlete as a universal model
+- Separate evidence from inference
+- Prioritize individual response
+
+
+---
+
+# Final Principle
+
+
+The purpose of State Assessment is not to immediately give the answer.
+
+The purpose is to correctly identify:
+
+Current situation
+
+↓
+
+Current limitation
+
+↓
+
+Correct next decision
+
+
+Assessment first.
+
+Strategy second.
+
+Adjustment third.
