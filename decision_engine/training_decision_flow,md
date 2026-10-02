@@ -1,0 +1,1244 @@
+decision_engine/training_decision_flow.md
+# Training Decision Flow — 自然健美训练决策流程
+
+## 1. 文件定位
+
+本文件是自然健美 Skill 的训练决策流程。
+
+目标：
+
+> 将用户的身体数据、训练数据、营养数据和恢复数据，转换为可执行的训练决策。
+
+核心流程：
+
+DATA
+→ STATE
+→ GOAL
+→ PHASE
+→ TRAINING STATUS
+→ TRAINING STRATEGY
+→ PLAN
+→ MONITOR
+→ ADJUST
+
+本文件不是单纯的训练知识库。
+
+它负责：
+
+> 调用知识库 + 调用运动员案例 + 分析个人数据 + 输出训练决策。
+
+---
+
+# 2. 第一层：收集数据
+
+在做训练决策之前，优先收集：
+
+## Basic Data
+
+- 性别
+- 年龄
+- 身高
+- 体重
+- 训练年龄
+- 当前体脂或视觉状态
+
+## Goal
+
+- 增肌
+- 减脂
+- 增肌减脂
+- 维持
+- 备赛
+- 赛后恢复
+
+## Training
+
+- 当前训练分化
+- 每周训练频率
+- 每个肌群训练频率
+- 每周组数
+- 动作
+- 每个动作组数
+- 次数
+- RIR
+- 训练重量
+- 训练表现
+- 训练时长
+
+## Nutrition
+
+- 每日热量
+- 蛋白质
+- 碳水
+- 脂肪
+- 食物来源
+- 饮食执行稳定性
+
+## Activity
+
+- 每日步数
+- 有氧
+- 日常活动量
+
+## Recovery
+
+- 睡眠时间
+- 睡眠质量
+- 主观疲劳
+- 肌肉酸痛
+- 关节状态
+- 训练动力
+- 心理压力
+
+---
+
+# 3. 数据不足时
+
+如果关键数据缺失：
+
+不要直接编造。
+
+使用：
+
+> UNKNOWN
+
+并说明：
+
+- 哪些数据未知
+- 哪些判断可以进行
+- 哪些判断暂时无法高置信度完成
+
+如果用户不愿意提供完整数据：
+
+> 使用已有数据进行条件性判断。
+
+例如：
+
+“如果你的7日平均体重确实持续下降，同时训练表现下降，那么更倾向于恢复/能量限制。”
+
+而不是：
+
+“你一定热量不足。”
+
+---
+
+# 4. 第二层：STATE
+
+调用：
+
+`decision_engine/state_assessment.md`
+
+同时参考：
+
+- `knowledge_base/recovery_science.md`
+- `knowledge_base/nutrition_science.md`
+- `knowledge_base/resistance_training.md`
+
+判断当前训练状态。
+
+主要状态：
+
+## Productive Training
+
+特征：
+
+- 训练表现稳定或上升
+- 恢复正常
+- 训练刺激有效
+- 没有明显累积疲劳
+
+策略：
+
+> 正常推进。
+
+---
+
+## Energy-Limited Training
+
+特征：
+
+- 热量赤字
+- 训练表现下降
+- 恢复能力下降
+- 饥饿增加
+
+策略：
+
+> 保留高价值训练刺激，控制训练疲劳。
+
+---
+
+## Recovery-Limited Training
+
+特征：
+
+- 睡眠下降
+- 疲劳持续
+- 多个动作表现下降
+- 恢复时间延长
+
+策略：
+
+> 优先恢复，不继续增加训练量。
+
+---
+
+## Productive Gaining Training
+
+特征：
+
+- 体重缓慢上升
+- 腰围增长可控
+- 训练表现上升
+- 恢复良好
+
+策略：
+
+> 保持增肌策略并逐步推进。
+
+---
+
+## Recomposition Training
+
+特征：
+
+- 体重相对稳定
+- 腰围下降或稳定
+- 训练表现稳定/上升
+
+策略：
+
+> 维持高质量训练，同时观察体成分变化。
+
+---
+
+## Plateau Training
+
+特征：
+
+- 体重长期稳定
+- 训练表现长期稳定
+- 目标肌群没有明显进步
+- 恢复基本正常
+
+策略：
+
+> 优先寻找训练刺激、动作选择、执行质量或营养问题，而不是直接增加所有变量。
+
+---
+
+# 5. 第三层：GOAL
+
+明确用户当前真正目标。
+
+如果用户同时说：
+
+“我要增肌减脂。”
+
+不要直接假设必须进入某一个极端阶段。
+
+根据：
+
+- 当前体脂
+- 近期体重趋势
+- 训练年龄
+- 赛后状态
+- 训练表现
+- 饮食执行
+
+判断：
+
+- Recomposition
+- Conservative Gain
+- Fat Loss
+- Maintenance
+- Post-Competition Recovery
+
+---
+
+# 6. 第四层：PHASE
+
+调用：
+
+`decision_engine/phase_selector.md`
+
+以及：
+
+- `decision_engine/bulking.md`
+- `decision_engine/cutting_engine.md`
+- `decision_engine/contest_prep.md`
+- `decision_engine/recovery.md`
+- `knowledge_base/contest_prep_science.md`
+
+判断当前阶段。
+
+优先考虑：
+
+## Post-Competition Recovery
+
+如果近期刚结束比赛：
+
+> 优先恢复正常饮食、训练、睡眠和生理状态。
+
+---
+
+## Fat Loss
+
+如果：
+
+- 体脂偏高
+- 目标明确减脂
+- 当前不需要增加体重
+
+进入减脂策略。
+
+---
+
+## Recomposition
+
+如果：
+
+- 体脂处于可调整范围
+- 训练表现仍有提升空间
+- 体重不需要快速变化
+
+可以使用recomp策略。
+
+---
+
+## Conservative Gain
+
+如果：
+
+- 体脂可接受
+- 恢复良好
+- 训练表现需要进一步提高
+
+可以进入小幅热量盈余。
+
+---
+
+## Contest Prep
+
+如果：
+
+- 有明确比赛目标
+- 比赛时间确定
+- 需要达到比赛体脂
+
+进入备赛模块。
+
+---
+
+# 7. 第五层：训练状态分析
+
+调用：
+
+`decision_engine/training_state.md`
+
+同时调用：
+
+`knowledge_base/resistance_training.md`
+
+`knowledge_base/hypertrophy.md`
+
+`knowledge_base/biomechanics.md`
+
+`knowledge_base/recovery_science.md`
+
+分析：
+
+- Frequency
+- Volume
+- Intensity
+- RIR
+- Exercise Selection
+- ROM
+- Technique
+- Rest
+- Progression
+- Fatigue
+
+---
+
+# 8. Frequency 决策
+
+不要使用：
+
+> “每个肌肉必须每周训练2次”
+
+作为绝对规则。
+
+Frequency的作用：
+
+> 分配训练刺激和疲劳。
+
+需要考虑：
+
+- 周训练量
+- 单次训练量
+- 单次疲劳
+- 恢复能力
+- 用户偏好
+- 训练时间
+
+如果某肌群每周一次也能：
+
+- 完成足够有效训练量
+- 持续进步
+- 正常恢复
+
+不应仅因为频率低而强行改变。
+
+如果单次训练量过大：
+
+> 可以通过增加频率分散疲劳。
+
+---
+
+# 9. Volume 决策
+
+训练量必须结合：
+
+- 训练年龄
+- 肌群
+- 动作
+- RIR
+- 训练频率
+- 恢复
+- 营养
+
+不要认为：
+
+> 组数越多 = 增肌越快。
+
+使用：
+
+Minimum Effective Volume
+→ Productive Volume
+→ High Fatigue Volume
+
+进行分析。
+
+如果增加训练量：
+
+但：
+
+- 表现没有增加
+- 恢复下降
+- 关节压力增加
+
+则训练量可能已经超过当前有效范围。
+
+---
+
+# 10. RIR 决策
+
+一般训练：
+
+- 复合动作：多数约1–3 RIR
+- 孤立动作：多数约0–2 RIR
+
+根据恢复状态动态调整。
+
+如果：
+
+恢复良好
++
+训练表现稳定
+
+→ 可以正常接近力竭。
+
+如果：
+
+恢复下降
++
+表现下降
+
+→ 提高RIR，减少无效疲劳。
+
+核心原则：
+
+> 接近力竭是刺激工具，不是目标。
+
+---
+
+# 11. Exercise Selection
+
+动作选择优先考虑：
+
+1. 目标肌肉刺激
+2. 稳定性
+3. ROM
+4. 负荷能力
+5. 渐进超负荷能力
+6. 疲劳成本
+7. 关节舒适度
+8. 个体结构
+
+不要仅因为：
+
+> 某个自然健美运动员使用某动作
+
+就要求用户复制。
+
+---
+
+# 12. Biomechanics 决策
+
+如果用户提出：
+
+- 身体左右不对称
+- 胸廓位置
+- 肩胛骨
+- 骨盆
+- 脊柱
+- 左右握法
+- 腿部站位
+- 动作轨迹
+- 某个动作是否适合自己
+
+调用：
+
+`knowledge_base/biomechanics.md`
+
+分析：
+
+- 解剖结构
+- 关节位置
+- 力矩
+- 阻力方向
+- 稳定性
+- ROM
+- 目标肌肉
+- 个体差异
+
+必须区分：
+
+### Theoretical Possibility
+
+理论上可能改变力线。
+
+### Practical Evidence
+
+是否有实际训练证据支持。
+
+### Individual Response
+
+用户本人是否表现改善。
+
+不要把理论可能性描述为确定效果。
+
+---
+
+# 13. Progression 决策
+
+优先使用：
+
+### Double Progression
+
+例如：
+
+目标：
+
+8–12 reps
+
+当用户能够：
+
+12
+12
+12
+
+并保持目标RIR：
+
+→ 增加重量。
+
+然后重新进入：
+
+8–10 reps
+
+逐渐推进。
+
+---
+
+# 14. Progression 不只是加重量
+
+可以通过：
+
+- 增加重量
+- 增加次数
+- 增加有效组
+- 提高动作质量
+- 增加ROM
+- 改善稳定性
+- 提高目标肌肉张力
+- 在相同重量下减少RIR
+
+实现进步。
+
+因此：
+
+> Strength Progression ≠ Hypertrophy Progression
+
+---
+
+# 15. Plateau 决策
+
+如果训练停滞：
+
+不要立即：
+
+> 增加训练量。
+
+按照以下顺序检查：
+
+1. 数据是否准确
+2. 睡眠
+3. 热量
+4. 蛋白质
+5. 训练执行
+6. RIR
+7. 动作选择
+8. ROM
+9. 训练量
+10. 训练频率
+11. 恢复
+12. 长期趋势
+
+只有确认基础变量没有问题：
+
+> 才考虑改变训练结构。
+
+---
+
+# 16. Weak Point Decision
+
+弱项分析：
+
+> 不是“哪里看起来小就一定多练哪里”。
+
+分析：
+
+- 当前肌肉量
+- 骨架
+- 插入点
+- 肌肉长度
+- 视觉比例
+- 动作能力
+- 训练量
+- 恢复
+
+然后决定：
+
+- 增加频率
+- 增加训练量
+- 更换动作
+- 调整ROM
+- 调整动作顺序
+- 增加高质量孤立动作
+
+---
+
+# 17. Nutrition Interaction
+
+训练决策必须与营养阶段同步。
+
+调用：
+
+`knowledge_base/nutrition_science.md`
+
+---
+
+## Surplus
+
+如果：
+
+体重缓慢上升
++
+表现上升
++
+恢复良好
+
+→ 训练可以逐步推进。
+
+---
+
+## Maintenance
+
+如果：
+
+体重稳定
++
+表现上升
+
+→ 不需要为了增肌强行增加大量热量。
+
+---
+
+## Deficit
+
+如果：
+
+体重下降
++
+表现基本稳定
+
+→ 尽可能保持训练刺激。
+
+---
+
+## Aggressive Deficit
+
+如果：
+
+体重快速下降
++
+表现下降
++
+恢复恶化
+
+→ 优先减少训练疲劳并重新评估热量。
+
+---
+
+# 18. Recovery Interaction
+
+调用：
+
+`knowledge_base/recovery_science.md`
+
+如果：
+
+睡眠正常
++
+表现正常
++
+疲劳低
+
+→ 正常训练。
+
+如果：
+
+睡眠下降
++
+表现稳定
+
+→ 可以暂时保持训练，但减少不必要力竭。
+
+如果：
+
+睡眠下降
++
+表现下降
++
+疲劳增加
+
+→ 降低训练疲劳。
+
+如果：
+
+长期恢复受限
+
+→ 考虑deload。
+
+---
+
+# 19. Contest Prep Interaction
+
+如果用户处于备赛：
+
+调用：
+
+`knowledge_base/contest_prep_science.md`
+
+核心目标：
+
+> 最大程度保留肌肉，而不是最大程度增加训练消耗。
+
+因此：
+
+- 保持机械张力
+- 控制训练量
+- 合理安排有氧
+- 稳定步数
+- 维持蛋白质
+- 控制赤字
+- 观察表现
+
+---
+
+# 20. Supplements Interaction
+
+如果用户询问补剂：
+
+调用：
+
+`knowledge_base/supplements.md`
+
+优先检查：
+
+- 饮食是否已经解决
+- 是否有明确需求
+- 科学证据
+- 安全性
+- 成本
+
+不要因为用户要求“最强补剂”就大量推荐。
+
+---
+
+# 21. Athlete Case Integration
+
+调用：
+
+`athletes/china/README.md`
+
+以及相关运动员文件。
+
+当前核心案例：
+
+- Chengyi Tan
+- Yuan Shilin
+- Wang Zhenghao
+- Kaisheng Wang
+
+运动员案例只用于：
+
+> 提供实践参考和案例对照。
+
+不能作为：
+
+> 科学因果证明。
+
+---
+
+# 22. Athlete Evidence
+
+每个案例必须区分：
+
+## Natural Evidence
+
+- A
+- B
+- C
+- D
+
+## Training Data Quality
+
+- A
+- B
+- C
+- D
+
+## Nutrition Data Quality
+
+- A
+- B
+- C
+- D
+
+## Longitudinal Data Quality
+
+- A
+- B
+- C
+- D
+
+---
+
+# 23. Cross-Case Validation
+
+如果多个高质量自然训练案例出现类似策略：
+
+可以提高：
+
+> Practical Confidence
+
+但不能直接改变：
+
+> Scientific Evidence Level
+
+例如：
+
+多个自然训练案例都使用某训练频率：
+
+可以说：
+
+> “该策略在自然训练案例中具有较多实践支持。”
+
+不能说：
+
+> “因此该频率一定是最优。”
+
+---
+
+# 24. 输出训练计划
+
+最终训练计划必须包含：
+
+## Split
+
+- 训练分化
+
+## Frequency
+
+- 每周训练频率
+
+## Weekly Volume
+
+- 每个肌群每周有效组
+
+## Exercises
+
+- 动作
+
+## Sets
+
+- 组数
+
+## Reps
+
+- 次数范围
+
+## RIR
+
+- RIR
+
+## Rest
+
+- 组间休息
+
+## Order
+
+- 动作顺序
+
+## Progression
+
+- 渐进方式
+
+## Deload
+
+- 何时考虑降低疲劳
+
+---
+
+# 25. 训练计划必须可执行
+
+不要只输出：
+
+“增加训练量。”
+
+应该输出：
+
+> 胸部每周增加2个有效组，分配到第二次胸部训练中；保持1–2 RIR，连续观察14天。
+
+不要只输出：
+
+“加强恢复。”
+
+应该输出：
+
+> 连续7天睡眠不足时，下一周复合动作保持2–3 RIR，并减少部分辅助组。
+
+---
+
+# 26. 调整幅度
+
+训练变量不要同时大幅修改。
+
+优先一次改变：
+
+- 1–2个动作
+- 或2–4个周有效组
+- 或训练频率
+- 或RIR
+
+然后观察：
+
+7天
+→
+14天
+→
+28天
+
+---
+
+# 27. Monitor
+
+训练计划执行后必须追踪：
+
+### Performance
+
+- 重量
+- 次数
+- RIR
+
+### Body
+
+- 体重
+- 腰围
+- 视觉变化
+
+### Recovery
+
+- 睡眠
+- 疲劳
+- 酸痛
+- 关节状态
+
+### Nutrition
+
+- 热量
+- 蛋白质
+- 碳水
+- 脂肪
+
+### Activity
+
+- 步数
+- 有氧
+
+---
+
+# 28. 7-Day Review
+
+主要判断：
+
+- 是否出现明显恢复问题
+- 是否出现明显表现变化
+- 是否存在执行问题
+
+不因为7天内的小变化就大幅修改计划。
+
+---
+
+# 29. 14-Day Review
+
+主要判断：
+
+- 训练表现趋势
+- 恢复趋势
+- 体重趋势
+- 腰围趋势
+- 训练量是否合适
+
+如果方向正确：
+
+> 保持。
+
+如果方向错误：
+
+> 小幅调整。
+
+---
+
+# 30. 28-Day Review
+
+判断：
+
+- 是否真正产生训练适应
+- 是否长期停滞
+- 是否存在恢复问题
+- 是否需要更换训练结构
+
+如果28天持续没有进步：
+
+> 进行系统性复盘。
+
+---
+
+# 31. Evidence Confidence
+
+每个最终建议提供：
+
+### High Confidence
+
+科学证据强
++
+个人数据明确
+
+### Moderate Confidence
+
+科学证据较好
++
+个人数据有限
+
+### Low Confidence
+
+主要依据：
+
+- 个体经验
+- Athlete Case
+- 理论推导
+
+必须明确告诉用户：
+
+> 哪部分是证据，哪部分是推断。
+
+---
+
+# 32. Documented vs Derived
+
+任何运动员数据：
+
+### Documented
+
+来源明确记录。
+
+### Derived
+
+根据数据计算。
+
+### Estimated
+
+根据有限信息估算。
+
+### Unknown
+
+没有足够信息。
+
+禁止：
+
+> 将Estimated写成Documented。
+
+---
+
+# 33. 最终输出模板
+
+每次训练决策尽可能按照：
+
+## Current State
+
+当前状态：
+
+## Goal
+
+当前目标：
+
+## Phase
+
+当前阶段：
+
+## Evidence
+
+关键数据：
+
+## Training Diagnosis
+
+训练诊断：
+
+## Training Recommendation
+
+训练建议：
+
+## Nutrition Interaction
+
+营养影响：
+
+## Recovery Interaction
+
+恢复影响：
+
+## Athlete Case Reference
+
+相关自然运动员案例：
+
+## Scientific Evidence
+
+科学依据：
+
+## Action
+
+接下来具体做什么：
+
+## Monitoring
+
+7天：
+
+14天：
+
+28天：
+
+## Confidence
+
+High / Moderate / Low
+
+---
+
+# 34. 决策优先级
+
+当多个变量冲突时：
+
+1. 健康与安全
+2. 用户明确目标
+3. 长期趋势
+4. 训练表现
+5. 恢复
+6. 体重与腰围
+7. 营养
+8. 训练量
+9. 训练频率
+10. 单日主观感觉
+11. 单日体重
+
+---
+
+# 35. 核心决策原则
+
+1. 不根据单日数据做重大调整。
+2. 不根据单个运动员复制训练计划。
+3. 不把理论推导当作事实。
+4. 不把相关性当作因果关系。
+5. 不把自然运动员案例当作科学证据。
+6. 不为了“高级”而增加复杂变量。
+7. 不同时大幅修改多个变量。
+8. 优先解决基础问题。
+9. 优先使用可长期执行的方案。
+10. 所有训练调整都必须进入监测周期。
+11. 训练量必须与恢复能力匹配。
+12. 增肌目标不是最大化训练疲劳。
+13. 减脂目标不是最大化热量消耗。
+14. 备赛目标不是最大化体重下降。
+15. 最终目标是最大化长期有效训练适应。
+
+---
+
+# 36. Skill 总公式
+
+最终训练决策：
+
+DATA
+→
+STATE
+→
+GOAL
+→
+PHASE
+→
+TRAINING STATUS
+→
+TRAINING STRATEGY
+→
+NUTRITION INTERACTION
+→
+RECOVERY INTERACTION
+→
+ATHLETE CASE VALIDATION
+→
+PLAN
+→
+MONITOR
+→
+ADJUST
+
+最终原则：
+
+> Scientific Evidence + Natural Athlete Case Evidence + Individual Response
+
+而不是：
+
+> 模仿某一个运动员。
+
+最终输出必须做到：
+
+> 有依据、可解释、可执行、可监测、可调整。
