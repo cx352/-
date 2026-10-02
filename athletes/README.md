@@ -1,8 +1,19 @@
-# 亚洲男性自然训练案例数据库
+# 亚洲男性自然训练案例数据库 V2.0
 
-本数据库用于收集、整理和分析亚洲男性自然训练者、自然健美运动员以及高质量长期自然训练案例。
 
-数据库的目的不是寻找单一的“最佳运动员”，而是通过多个高质量案例，提取自然训练者在：
+## 1. Database Purpose
+
+
+本数据库用于收集、整理和分析：
+
+- 亚洲男性自然训练者
+- 自然健美运动员
+- 高质量长期自然训练案例
+
+
+数据库的目的不是寻找单一的“最佳运动员”。
+
+而是通过多个高质量案例，提取自然训练者在：
 
 - 增肌
 - 减脂
@@ -14,29 +25,59 @@
 
 方面的真实实践信息。
 
-最终与科学证据结合，为 Natural Fitness Coach Skill 提供案例参考。
+
+最终结合科学证据，为：
+
+Natural Fitness Coach Skill
+
+提供案例参考。
+
 
 ---
 
-# 1. 核心原则
+# 2. Core Evidence Structure
 
-本数据库采用：
 
-> Scientific Evidence + Athlete Case Evidence + Individual Response
+数据库采用三层证据结构：
 
-三层结构。
 
-## Scientific Evidence
+## Layer 1 — Scientific Evidence
 
-用于建立一般性的训练、营养和恢复原则。
 
-优先级最高。
+用于建立一般训练和营养原则。
+
+
+包括：
+
+- 系统综述
+- Meta-analysis
+- 随机对照实验
+- 高质量运动科学研究
+
+
+用于判断：
+
+- 肌肥大机制
+- 训练量
+- 训练频率
+- RIR/RPE
+- 能量平衡
+- 蛋白质需求
+- 恢复原则
+
+
+科学证据优先级最高。
+
 
 ---
 
-## Athlete Case Evidence
+## Layer 2 — Athlete Case Evidence
 
-用于观察真实自然训练者长期实践中的：
+
+用于观察真实自然训练者长期实践。
+
+
+记录：
 
 - 训练计划
 - 动作选择
@@ -46,27 +87,33 @@
 - 次数
 - RIR/RPE
 - 渐进超负荷
-- 饮食
+- 饮食结构
 - 热量
 - 宏量营养素
 - 体重变化
 - 体脂变化
-- 备赛
-- 恢复
-- 睡眠
+- 备赛过程
+- 恢复方式
 
-运动员案例只能作为实践证据。
 
-不能因为某个运动员取得优秀成绩，就认为其方法具有因果效果。
+运动员案例属于实践证据。
+
+
+不能因为运动员取得优秀成绩，就认为其方法具有因果关系。
+
 
 ---
 
-## Individual Response
+## Layer 3 — Individual Response
 
-最终训练和饮食方案必须根据实际使用者的：
 
-- 体重变化
-- 腰围变化
+最终训练和饮食方案必须根据实际使用者反馈调整。
+
+
+重点观察：
+
+- 体重趋势
+- 腰围趋势
 - 训练表现
 - 恢复
 - 睡眠
@@ -74,356 +121,775 @@
 - 活动量
 - 长期依从性
 
-进行调整。
+
+个人长期数据优先于案例模仿。
+
 
 ---
 
-# 2. 数据库纳入范围
+# 3. Database Inclusion Range
 
-数据库不再局限于 Natural Pro 运动员。
 
-允许纳入：
+数据库主要关注：
 
-### A类
 
-具有较强官方 Natural 赛事证据的运动员。
+亚洲男性：
 
-例如：
+- 中国大陆
+- 中国台湾
+- 中国香港
+- 日本
+- 韩国
+- 东南亚
 
-- Natural Pro
-- 官方 Natural 职业资格
-- 官方 Natural 比赛成绩
-- 其他可靠 Natural 赛事体系记录
 
----
+项目包括：
 
-### B类
+- Natural Bodybuilding
+- Natural Classic Physique
+- Natural Men's Physique
+- 高质量长期自然训练案例
 
-长期公开自然训练经历，并且拥有大量高质量训练和身体变化资料的自然训练者。
-
-即使没有 Natural Pro 身份，只要：
-
-- 长期训练记录丰富
-- 训练计划公开
-- 饮食资料较丰富
-- 体重或体成分变化有记录
-- 训练效果有长期记录
-- 自然身份存在较强支持
-
-也可以作为重要案例。
 
 ---
 
-### C类
+# 4. Athlete Evidence Classification
 
-具有较丰富训练经验和公开训练资料，但自然身份或长期数据不足的案例。
 
-可以用于：
+每个案例必须记录自然证据等级。
 
-- 动作参考
-- 训练结构参考
-- 训练理念参考
-- 实践经验参考
 
-但不能作为核心自然证据。
+## Level A — Strong Natural Competition Evidence
 
----
-
-### D类
-
-资料不足或可信度较低的案例。
-
-例如：
-
-- 仅有个人自称
-- 只有短期训练记录
-- 只有单次照片
-- 缺乏长期数据
-- 训练方法来源不明确
-
-D类案例不得作为核心决策依据。
-
----
-
-# 3. 自然身份证据
-
-自然身份必须单独记录。
-
-## A — Strong Evidence
 
 包括：
 
-- 官方 Natural Pro 赛事
+- 官方 Natural Pro 比赛
 - 官方 Natural 职业资格
 - 官方 Natural 比赛成绩
-- 可信 Natural 赛事体系中的长期参赛记录
+- 可信 Natural 赛事体系记录
+
 
 注意：
 
-> 参加 Natural 赛事可以证明其拥有 Natural Competition Evidence，但不自动证明其终身自然状态。
+
+参加 Natural 赛事证明：
+
+Natural Competition Evidence
+
+
+但不能自动证明：
+
+终身自然状态。
+
 
 ---
 
-## B — Moderate Evidence
+## Level B — High Quality Natural Training Case
+
 
 包括：
 
-- 长期参加 Natural 体系比赛
-- 多个可信来源支持
 - 长期公开自然训练经历
-- 长期训练、饮食和体重记录
+- 大量训练资料
+- 饮食资料
+- 体重变化记录
+- 长期身体变化记录
+- 比赛准备记录
 
-但官方资料不完整。
 
----
+可以作为重要实践案例。
 
-## C — Insufficient Evidence
-
-主要依赖：
-
-- 个人声明
-- 社交媒体自述
-- 缺乏独立证据
-
-C级案例不得作为核心自然样本。
 
 ---
 
-# 4. 案例价值评分
+## Level C — Useful Public Training Case
+
+
+包括：
+
+- 丰富训练经验
+- 公开训练资料
+- 动作和训练结构参考价值
+
+
+但：
+
+自然身份或长期数据不足。
+
+
+只能作为辅助案例。
+
+
+---
+
+## Level D — Low Confidence Case
+
+
+包括：
+
+- 只有个人声明
+- 短期变化
+- 单次照片
+- 数据不足
+- 来源不明确
+
+
+不得作为核心决策依据。
+
+
+---
+
+# 5. Case Quality Evaluation
+
 
 自然证据等级和案例价值必须分开。
 
-一个运动员即使没有 Natural Pro 身份，只要公开数据非常丰富，也可能具有很高的案例价值。
 
-每个案例需要分别记录：
+每个案例需要记录：
 
-### Natural Evidence
 
-自然身份证据等级：
+## Natural Evidence
 
-> A / B / C
+A / B / C / D
 
-### Training Data Quality
 
-训练数据完整度：
+## Training Data Quality
 
-> High / Medium / Low
+High / Medium / Low
 
-### Nutrition Data Quality
 
-饮食数据完整度：
+## Nutrition Data Quality
 
-> High / Medium / Low
+High / Medium / Low
 
-### Longitudinal Data Quality
 
-长期纵向数据完整度：
+## Longitudinal Data Quality
 
-> High / Medium / Low
+High / Medium / Low
 
-### Recovery Data Quality
 
-恢复和作息资料完整度：
+## Recovery Data Quality
 
-> High / Medium / Low
+High / Medium / Low
+
+
+说明：
+
+自然证据高，不代表训练数据一定丰富。
+
+训练数据丰富，也不代表自然证据一定最高。
+
 
 ---
 
-# 5. 优先收集的信息
+# 6. Athlete Information Collection
+
 
 每名案例尽可能收集：
 
-## 基础信息
 
-- 名称
-- 国家/地区
-- 身高
-- 训练年龄
-- 项目
-- 职业状态
+## Basic Information
 
----
 
-## 身体数据
+- Name
+- Country / Region
+- Category
+- Height
+- Training age
+- Competition status
 
-- 比赛体重
-- 休赛期体重
-- 当前体重
-- 体脂
-- 腰围
-- 肌肉量
-- 长期体重变化
 
 ---
 
-## 比赛数据
+## Body Data
 
-- 比赛名称
-- 比赛年份
-- 项目
-- 名次
-- Natural赛事属性
-- 职业资格
+
+记录：
+
+- Competition weight
+- Off-season weight
+- Current weight
+- Body fat
+- Waist
+- Muscle measurements
+- Long-term weight changes
+
+
+无法确认：
+
+标记 UNKNOWN。
+
 
 ---
 
-## 训练数据
+## Competition Data
 
-- 训练分化
-- 训练频率
-- 每周训练次数
-- 每个肌群训练频率
-- 每周组数
-- 每个动作组数
-- 次数
+
+记录：
+
+- Competition name
+- Year
+- Category
+- Placement
+- Natural competition status
+- Professional qualification
+
+
+---
+
+## Training Data
+
+
+记录：
+
+- Training split
+- Weekly frequency
+- Muscle frequency
+- Weekly sets
+- Exercises
+- Sets
+- Repetitions
+- Load
 - RIR/RPE
-- 训练重量
-- 休息时间
-- 动作选择
-- 动作顺序
-- 渐进超负荷方式
-- Deload
+- Rest time
+- Exercise order
+- Progression method
+- Deload strategy
+
 
 ---
 
-## 营养数据
+## Nutrition Data
 
-- 总热量
-- 蛋白质
-- 碳水化合物
-- 脂肪
-- 食物结构
-- 增肌期饮食
-- 减脂期饮食
-- 备赛饮食
+
+记录：
+
+- Calories
+- Protein
+- Carbohydrates
+- Fat
+- Food structure
+- Bulking diet
+- Cutting diet
+- Contest preparation diet
 - Refeed
-- Diet Break
+- Diet break
+
 
 ---
 
-## 活动量
+## Activity Data
 
-- 每日步数
-- 有氧类型
-- 有氧频率
-- 有氧时长
-- 日常活动变化
 
----
+记录：
 
-## 恢复
+- Daily steps
+- Cardio type
+- Cardio frequency
+- Cardio duration
+- Activity changes
 
-- 睡眠时间
-- 睡眠质量
-- 作息
-- 疲劳
-- 压力
-- 恢复策略
-- 休息日安排
 
 ---
 
-## 纵向数据
+## Recovery Data
 
-优先收集：
 
-> 多个月或多年连续数据。
+记录：
 
-例如：
+- Sleep duration
+- Sleep quality
+- Schedule
+- Fatigue
+- Stress
+- Recovery strategy
+- Rest days
 
-- 体重变化
-- 腰围变化
-- 训练表现变化
-- 训练量变化
-- 饮食变化
-- 体脂变化
-- 比赛准备过程
-
-纵向数据的价值通常高于单次照片或单次训练记录。
 
 ---
 
-# 6. 数据来源等级
+# 7. Data Source Classification
 
-优先使用：
+
+优先级：
+
 
 ## Level 1
 
-官方赛事资料、官方运动员资料。
+官方资料：
 
-##二级
+- 官方赛事资料
+- 官方运动员资料
+
+
+---
+
+## Level 2
 
 运动员本人长期公开资料：
 
 - YouTube
--哔哩哔哩
+- Bilibili
 - Instagram
-- 个人网站
-- 训练日志
-- 访谈
+- Personal website
+- Training log
+- Interviews
 
-##三级
-
-高质量媒体采访和专业内容。
-
-##四级
-
-教练、运动科学家和专业人士的公开资料。
-
-##五级
-
-论坛、Reddit、社交媒体讨论。
-
-5级仅作为辅助信息。
 
 ---
 
-# 7. 数据记录原则
+## Level 3
 
-如果数据无法确认：
+高质量媒体采访：
 
->未知
+- 专业媒体
+- 教练访谈
+- 科学相关内容
 
-如果数据来自运动员本人：
-
->运动员报告
-
-如果数据来自官方记录：
-
->官方
-
-如果数据来自第三方：
-
->次要来源
-
-如果是根据多个数据推算：
-
->衍生估算
-
-不得把推算值伪装成运动员本人公开的数据。
 
 ---
 
-# 8. 运动员案例与训练计划
+## Level 4
 
-数据库应该尽可能记录运动员真实使用过的训练方案。
+专业人士资料：
 
-例如：
+- 教练
+- 运动科学家
 
-```文本
-训练分化：
-胸 / 肩 / 背 / 手臂 / 腿
 
-频率：
-每周X次
+---
 
-胸：
-动作A — X组 × X次
-动作B — X组 × X次
-动作C — X组 × X次
+## Level 5
 
-RIR：
-X
+社区资料：
 
-组间休息：
-X分钟
+- Reddit
+- Forums
+- Social media discussion
+
+
+Level 5只能作为辅助信息。
+
+
+---
+
+# 8. Data Recording Rules
+
+
+所有数据必须标记来源。
+
+
+## Official
+
+
+官方记录。
+
+
+## Athlete Report
+
+
+运动员本人公开。
+
+
+## Third Party
+
+
+第三方来源。
+
+
+## Derived Estimate
+
+
+根据多个数据推算。
+
+
+禁止：
+
+把推算数据写成运动员本人公开数据。
+
+
+缺少数据：
+
+必须写：
+
+UNKNOWN
+
+
+---
+
+# 9. Decision Engine Integration
+
+
+数据库用于支持：
+
+decision_engine
+
+
+工作流程：
+
+
+User Data
+
+↓
+
+State Assessment
+
+↓
+
+Phase Selection
+
+↓
+
+Training State
+
+↓
+
+调用相关 Athlete Cases
+
+↓
+
+比较实践模式
+
+↓
+
+生成个性化建议
+
+
+运动员案例：
+
+不是训练模板。
+
+
+而是参考模型。
+
+
+---
+
+# 10. Athlete Case Selection Rules
+
+
+选择案例时优先考虑：
+
+
+## 1. Athlete Similarity
+
+
+包括：
+
+- 性别
+- 地区
+- 训练年龄
+- 项目
+- 当前阶段
+
+
+---
+
+## 2. Data Quality
+
+
+优先：
+
+- 长期数据
+- 训练详细记录
+- 饮食记录
+- 恢复信息
+
+
+---
+
+## 3. Evidence Classification
+
+
+优先顺序：
+
+
+A > B > C > D
+
+
+但：
+
+
+高质量B级案例可能比低数据A级案例拥有更高实践价值。
+
+
+---
+
+# 11. Athlete Case Usage
+
+
+案例可以用于：
+
+
+## Training Reference
+
+参考：
+
+- 分化
+- 频率
+- 训练量
+- 动作选择
+
+
+## Nutrition Reference
+
+参考：
+
+- 热量策略
+- 宏量营养素
+- 增肌饮食
+- 减脂饮食
+
+
+## Contest Preparation Reference
+
+参考：
+
+- 备赛周期
+- 热量下降
+- 有氧安排
+
+
+## Recovery Reference
+
+参考：
+
+- 睡眠
+- 疲劳管理
+- 休息安排
+
+
+只有数据充分的领域才能调用。
+
+
+---
+
+# 12. Avoid Incorrect Interpretation
+
+
+系统禁止：
+
+
+“运动员用了方法X并成功，因此方法X导致成功。”
+
+
+必须区分：
+
+
+Observation:
+
+运动员使用某方法。
+
+
+↓
+
+Interpretation:
+
+该方法可能适合该运动员。
+
+
+↓
+
+Causal conclusion:
+
+需要科学证据支持。
+
+
+运动员案例：
+
+提供实践参考。
+
+不是因果证明。
+
+
+---
+
+# 13. Athlete Profile Template
+
+
+每个运动员文件统一格式：
+
+
+## Basic Information
+
+
+Name:
+
+Country:
+
+Category:
+
+Height:
+
+Training Age:
+
+Competition Status:
+
+
+
+## Evidence Classification
+
+
+Natural Evidence:
+
+A / B / C / D
+
+
+Training Data Quality:
+
+High / Medium / Low
+
+
+Nutrition Data Quality:
+
+High / Medium / Low
+
+
+Longitudinal Data Quality:
+
+High / Medium / Low
+
+
+Recovery Data Quality:
+
+High / Medium / Low
+
+
+
+## Body Data
+
+
+Competition Weight:
+
+Off-season Weight:
+
+Current Weight:
+
+Body Fat:
+
+Waist:
+
+Unknown if unavailable.
+
+
+
+## Competition History
+
+
+Competition:
+
+Year:
+
+Category:
+
+Result:
+
+Natural Competition Evidence:
+
+
+
+## Training Data
+
+
+Split:
+
+Frequency:
+
+Weekly Sets:
+
+Exercise Selection:
+
+Sets:
+
+Repetitions:
+
+RIR/RPE:
+
+Rest:
+
+Progression Method:
+
+Deload:
+
+
+
+## Nutrition Data
+
+
+Calories:
+
+Protein:
+
+Carbohydrates:
+
+Fat:
+
+Food Structure:
+
+Bulking:
+
+Cutting:
+
+Contest Preparation:
+
+
+
+## Recovery
+
+
+Sleep:
+
+Rest Days:
+
+Fatigue Management:
+
+Stress Management:
+
+
+
+## Sources
+
+
+Official:
+
+Athlete Report:
+
+Third Party:
+
+Derived Estimate:
+
+
+
+## Unknown Data
+
+
+List unavailable information.
+
+
+---
+
+# 14. Core Principle
+
+
+The database does not search for the strongest athlete.
+
+
+It searches for:
+
+
+Reliable patterns across multiple high-quality cases.
+
+
+Final decision always follows:
+
+
+Scientific Evidence
+
++
+
+Athlete Case Evidence
+
++
+
+Individual Response
